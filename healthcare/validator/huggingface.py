@@ -131,3 +131,17 @@ def remove_models(
         shutil.rmtree(local_dir)
     except Exception as e:
         return
+    
+def update_models(
+    self,
+):
+    """
+    Update the model.
+
+    """
+    
+    try:
+        local_dir = os.path.join(BASE_DIR, "healthcare/models/validator/cache")
+        shutil.update(local_dir)
+    except Exception as e:
+        return
